@@ -44,3 +44,4 @@ Route::get('hairstyles/delete/{id}', 'HairstylesController@delete');
 
 Route::resource('hairstyles/rest','API\HairstylesController');
 Route::resource('frames/rest','API\FramesController');
+Route::resource('categories/rest','API\CategoriesController');

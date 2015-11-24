@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers\api;
 
-use App\Hairstyles;
+use App\Categories;
 use Illuminate\Http\Request;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Response;
 
-class HairstylesController extends Controller
+class CategoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,22 +17,7 @@ class HairstylesController extends Controller
      */
     public function index()
     {
-        $hairstyle= Hairstyles::with('category')->get();
-        $jsonArray = [];
-        foreach($hairstyle as $hs){
-            $jsonArray[] = [
-                "hairstyleId"=>$hs->hairstyle_id,
-                "categoryId"=>$hs->category_id,
-                "hairstyleName"=>$hs->name,
-                "categoryName"=>$hs->category->name,
-                "image"=>url('/uploads/hairstyles\/').$hs->image,
-                "hairsyleDescription"=>$hs->description,
-                "categoryDescription"=>$hs->category->description,
-
-            ];
-        }
-        return response()->json($jsonArray);
-
+        return Categories::all();
     }
 
     /**

@@ -16,7 +16,17 @@ class FramesController extends Controller
      */
     public function index()
     {
-        return Frames::all();
+        $frames= Frames::all();
+        $jsonArray = [];
+        foreach ($frames as $fs){
+        $jsonArray[]= [
+            "frameId" => $fs->id,
+            "frameName" => $fs->name,
+            "image" => url('/uploads/frames\/').$fs->image,
+            "frameDescription"=>$fs->description,
+        ];
+    }
+        return response()->json($jsonArray);
     }
 
     /**
