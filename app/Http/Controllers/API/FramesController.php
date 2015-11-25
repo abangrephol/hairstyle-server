@@ -22,7 +22,7 @@ class FramesController extends Controller
         $jsonArray[]= [
             "frameId" => $fs->id,
             "frameName" => $fs->name,
-            "image" => url('/uploads/frames\/').$fs->image,
+            "image" => url('/uploads/frames/'.$fs->image),
             "frameDescription"=>$fs->description,
         ];
     }
