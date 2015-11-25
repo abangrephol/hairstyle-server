@@ -25,7 +25,7 @@ class HairstylesController extends Controller
                 "categoryId"=>$hs->category_id,
                 "hairstyleName"=>$hs->name,
                 "categoryName"=>$hs->category->name,
-                "image"=>url('/uploads/hairstyles\/').$hs->image,
+                "image"=>url('/uploads/hairstyles/'.$hs->image),
                 "hairsyleDescription"=>$hs->description,
                 "categoryDescription"=>$hs->category->description,
 
