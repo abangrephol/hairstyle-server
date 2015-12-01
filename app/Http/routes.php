@@ -42,6 +42,6 @@ Route::get('hairstyles/edit/{id}', 'HairstylesController@edit');
 Route::post('hairstyles/update/{id}', 'HairstylesController@update');
 Route::get('hairstyles/delete/{id}', 'HairstylesController@delete');
 
-Route::resource('hairstyles/rest','API\HairstylesController');
-Route::resource('frames/rest','API\FramesController');
-Route::resource('categories/rest','API\CategoriesController');
+Route::resource('api/hairstyles','API\HairstylesController');
+Route::resource('api/frames','API\FramesController');
+Route::resource('api/categories','API\CategoriesController');

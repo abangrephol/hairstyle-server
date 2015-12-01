@@ -17,7 +17,17 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        return Categories::all();
+        $categories= Categories::all();
+        $jsonArray = [];
+        foreach($categories as $category){
+            $jsonArray[] = [                
+                "categoryId"=>$category->category_id,
+                "categoryName"=>$category->name,
+                "categoryDescription"=>$category->description,
+
+            ];
+        }
+        return response()->json($jsonArray);
     }
 
     /**
