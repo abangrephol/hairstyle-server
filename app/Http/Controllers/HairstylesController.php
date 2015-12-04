@@ -23,6 +23,11 @@ class HairstylesController extends Controller
         return view('hairstyles/hairstyles', compact('hairstyles'));
     }
 
+    public function midpoint($id){
+        $hairstyles = Hairstyles::find($id);
+        return view('hairstyles/midpoint', compact('hairstyles'));
+    }
+
     public function add()
     {
         $category = Categories::all();
@@ -77,6 +82,15 @@ class HairstylesController extends Controller
         $hairstyles->image = $fileName;
         $hairstyles->save();
         return redirect()->intended('hairstyles');
+    }
+
+    public function updatePoint($id, request $request)
+    {
+        $hairstyles = hairstyles::find($id);
+        $hairstyles->Xpoint = $request->input('Xpoint');
+        $hairstyles->Ypoint = $request->input('Ypoint');
+        $hairstyles->save();
+        return redirect()->intended('hairstyles/edit/'.$id);
     }
 
     public function delete($id)

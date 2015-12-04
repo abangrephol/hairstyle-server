@@ -28,6 +28,13 @@
                                                     <input type="file" name="image" accept="image/*"/>
                                                 </div>
                                                 </div>
+                                                <div class="lbl_lfts">&nbsp;</div>
+                                                <div class="lbl_rgts"><div class="col-sm-12">
+                                                <a href="{{url('/hairstyles/edit/midpoint',$hairstyles->hairstyle_id)}}">
+                                                <img src="{{url('/uploads/hairstyles/'.$hairstyles->image)}}" alt="{{$hairstyles->image}}"  class="img-thumbnail img-responsive img-rounded" style="max-height:200px; max-width:400px;">
+                                                </a>
+                                                </div>
+                                                </div>
                                               </li>
                                                  <li>
                                                 <div class="lbl_lfts">Hairstyles Name</div>

@@ -39,8 +39,11 @@ Route::get('hairstyles', 'HairstylesController@index');
 Route::get('hairstyles/add', 'HairstylesController@add');
 Route::post('hairstyles/insert', 'HairstylesController@insert');
 Route::get('hairstyles/edit/{id}', 'HairstylesController@edit');
+Route::get('hairstyles/edit/midpoint/{id}', 'HairstylesController@midpoint');
 Route::post('hairstyles/update/{id}', 'HairstylesController@update');
+Route::post('hairstyles/updatepoint/{id}', 'HairstylesController@updatePoint');
 Route::get('hairstyles/delete/{id}', 'HairstylesController@delete');
+
 
 Route::resource('api/hairstyles','API\HairstylesController');
 Route::resource('api/frames','API\FramesController');
