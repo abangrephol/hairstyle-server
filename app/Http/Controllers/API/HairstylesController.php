@@ -28,6 +28,8 @@ class HairstylesController extends Controller
                 "image"=>url('/uploads/hairstyles/'.$hs->image),
                 "hairsyleDescription"=>$hs->description,
                 "categoryDescription"=>$hs->category->description,
+				"xPoint" => $hs->Xpoint,
+				"yPoint" => $hs->Ypoint,
 
             ];
         }
