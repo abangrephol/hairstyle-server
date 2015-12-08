@@ -1,24 +1,24 @@
 @extends('layouts.master')
 @section('contentpanel')
  <script>
-$(function() {
+/*$(function() {
 $("#image").click(function(e) {
   var offset = $(this).offset();
-  var relativeX = (e.pageX - offset.left);
-  var relativeY = (e.pageY - offset.top);
+  var relativeX = (e.pageX - offset.left -4);
+  var relativeY = (e.pageY - offset.top -4);
  var X = relativeX/this.width;
  var Y = relativeY/this.height;
  console.log('X='+X+': Y='+Y);
  $('#Xpoint').val(X.toFixed(6));
  $('#Ypoint').val(Y.toFixed(6));
 });
-});
+});*/
 
         $(function () {
             $("#image").pointr({
                 callback: function (x, y) {
-                    $("#normalizedX").val(x);
-                    $("#normalizedY").val(y);
+                    $("#Xpoint").val(x.toFixed(6));
+                    $("#Ypoint").val(y.toFixed(6));
                 }
             });
         });

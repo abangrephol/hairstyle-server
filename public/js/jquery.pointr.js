@@ -19,8 +19,8 @@
             var point = $(this).parent().find("[data-role=pointer]");
             if (point.length == 1) {
                 point.css({
-                        left: x - 8,
-                        top: y
+                        left: x - 10,
+                        top: y - 10
                     })
                     .hide()
                     .fadeIn();
