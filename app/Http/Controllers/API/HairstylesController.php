@@ -21,15 +21,15 @@ class HairstylesController extends Controller
         $jsonArray = [];
         foreach($hairstyle as $hs){
             $jsonArray[] = [
-                "hairstyleId"=>$hs->hairstyle_id,
-                "categoryId"=>$hs->category_id,
+                "hairstyleId"=>(int) $hs->hairstyle_id,
+                "categoryId"=>(int)$hs->category_id,
                 "hairstyleName"=>$hs->name,
                 "categoryName"=>$hs->category->name,
                 "image"=>url('/uploads/hairstyles/'.$hs->image),
                 "hairsyleDescription"=>$hs->description,
                 "categoryDescription"=>$hs->category->description,
-				"xPoint" => $hs->Xpoint,
-				"yPoint" => $hs->Ypoint,
+				"xPoint" => (float) $hs->Xpoint,
+				"yPoint" => (float) $hs->Ypoint,
 
             ];
         }
