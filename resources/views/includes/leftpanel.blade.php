@@ -28,7 +28,7 @@
     <li class="{{Request::is('hairstyles*') ? 'active' : ''}}"><a href="{{url('/hairstyles')}}"><i class="fa fa-edit"></i> <span>Hairstyles</span></a></li>
     <li class="{{Request::is('frames*') ? 'active' : ''}}"><a href="{{url('/frames')}}"><i class="fa fa-edit"></i> <span>Frame</span></a></li>
     <li class="{{Request::is('categories*') ? 'active' : ''}}"><a href="{{url('/categories')}}"><i class="fa fa-edit"></i> <span>Categories</span></a></li>
-    <li class="{{Request::is('client*') ? 'active' : ''}}"><a href="{{url('/client')}}"><i class="fa fa-edit"></i> <span>Client</span></a></li>
+    <li class="{{Request::is('clients*') ? 'active' : ''}}"><a href="{{url('/clients')}}"><i class="fa fa-edit"></i> <span>Clients</span></a></li>
   </ul>
 
 

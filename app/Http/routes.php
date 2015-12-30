@@ -44,7 +44,14 @@ Route::post('hairstyles/update/{id}', 'HairstylesController@update');
 Route::post('hairstyles/updatepoint/{id}', 'HairstylesController@updatePoint');
 Route::get('hairstyles/delete/{id}', 'HairstylesController@delete');
 
+Route::get('clients', 'ClientsController@index');
+Route::get('clients/add', 'ClientsController@add');
+Route::post('clients/insert', 'ClientsController@insert');
+Route::get('clients/edit/{id}', 'ClientsController@edit');
+Route::post('clients/update/{id}', 'ClientsController@update');
+Route::get('clients/delete/{id}', 'ClientsController@delete');
 
 Route::resource('api/hairstyles','API\HairstylesController');
 Route::resource('api/frames','API\FramesController');
 Route::resource('api/categories','API\CategoriesController');
+Route::resource('api/check','API\ClientsController');
