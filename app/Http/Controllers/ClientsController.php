@@ -42,7 +42,7 @@ class ClientsController extends Controller
 		$unique = false;
 		$api = "";
 		while(!$unique){
-			$api = str_random(40);
+			$api = str_random(20);
 			$count = ApiKeys::where('api', '=', $api)->count();
 			if($count == 0) $unique = true;
 		}
