@@ -17,7 +17,7 @@
 <script src="{{url('/js/raphael-2.1.0.min.js')}}"></script>
 <script src="{{url('/js/jquery.datatables.min.js')}}"></script>
 <script src="{{url('/js/chosen.jquery.min.js')}}"></script>
-<script src="{{url('/js/custom.js')}}"></script>a
+<script src="{{url('/js/custom.js')}}"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">

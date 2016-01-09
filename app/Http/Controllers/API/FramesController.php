@@ -20,9 +20,12 @@ class FramesController extends Controller
         $jsonArray = [];
         foreach ($frames as $fs){
         $jsonArray[]= [
-            "frameId" => $fs->id,
+            "frameId" => $fs->frame_id,
             "frameName" => $fs->name,
-            "image" => url('/uploads/frames/'.$fs->image),
+            "imageLayout" => url('/uploads/frames/'.$fs->image_layout),
+			"imageBackground" => url('/uploads/frames/'.$fs->image_background),
+			"imageForeground" => url('/uploads/frames/'.$fs->image_foreground),
+			"imagePreview" => url('/uploads/frames/'.$fs->image_preview),
             "frameDescription"=>$fs->description,
         ];
     }

@@ -25,7 +25,7 @@ Route::get('frames', 'FramesController@index');
 Route::get('frames/add', 'FramesController@add');
 Route::post('frames/insert', 'FramesController@insert');
 Route::get('frames/edit/{id}', 'FramesController@edit');
-Route::put('frames/update/{id}', 'FramesController@update');
+Route::post('frames/update/{id}', 'FramesController@update');
 Route::get('frames/delete/{id}', 'FramesController@delete');
 
 Route::get('categories', 'CategoriesController@index');
