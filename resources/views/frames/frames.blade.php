@@ -13,7 +13,7 @@
                 </div>
                 <div class="panel-body">
                     <div class="table-responsive">
-                        @foreach($frames as $frames) @endforeach
+                        
                         <table class="table table-bordered mb30 table-primary" style="font-size:12px;margin-bottom: 17px;">
                             <tr>
                                 <th>Frame Name</th>
@@ -21,16 +21,18 @@
                                 <th>Image</th>
                                 <th>Action</th>
                             </tr>
+							@foreach($frames as $frame) 
                             <tr>
                                 <td>
-                                    <a href="{{url('/frames/edit',$frames->frame_id)}}">{{$frames->name}}</a>
+                                    <a href="{{url('/frames/edit',$frame->frame_id)}}">{{$frame->name}}</a>
                                 </td>
-                                <td>{{$frames->description}}</td>
-                                <td><img alt="{{$frames->image_preview}}" class="img-thumbnail img-responsive img-rounded" src="{{url('/uploads/frames/'.$frames->image_preview)}}" style="max-height:200px; max-width:400px;"></td>
+                                <td>{{$frame->description}}</td>
+                                <td><img alt="{{$frame->image_preview}}" class="img-thumbnail img-responsive img-rounded" src="{{url('/uploads/frames/'.$frame->image_preview)}}" style="max-height:200px; max-width:400px;"></td>
                                 <td>
-                                    <a href="{{url('/frames/delete',$frames->frame_id)}}"><span><i class="fa fa-trash-o"></i></span></a>
+                                    <a href="{{url('/frames/delete',$frame->frame_id)}}"><span><i class="fa fa-trash-o"></i></span></a>
                                 </td>
                             </tr>
+							@endforeach
                         </table>
                     </div><!-- table-responsive -->
                 </div><!-- panel-body -->
