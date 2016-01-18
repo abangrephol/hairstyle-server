@@ -18,8 +18,10 @@ class ClientsController extends Controller
     public function index(request $request)
     {
 		DB::enableQueryLog();
+		$imei = $request->input('imei');
 		$api = $request->input('api');
         $client = ApiKeys::where('api', $api)
+			->where('imei',$imei)
 			->count();
 		if($client>0){
 			$jsonArray = [
